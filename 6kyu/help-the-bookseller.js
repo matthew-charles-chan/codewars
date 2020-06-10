@@ -74,6 +74,5 @@ const stockList = (listOfArt, listOfCat) => {
 
 const b = ["ABAR 200", "CDXE 500", "BKWR 250", "BTSQ 890", "DRTY 600"];
 const c = ["A", "B", "Z"]
-const res = "(A : 200) - (B : 1140)"
 // stockList(b, c)
 console.log(stockList(b, c))

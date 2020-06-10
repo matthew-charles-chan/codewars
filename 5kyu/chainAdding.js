@@ -10,3 +10,4 @@ function add(i) {
   return total
 }
 
+console.log(add)
