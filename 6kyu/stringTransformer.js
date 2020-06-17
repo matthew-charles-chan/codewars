@@ -1,15 +1,15 @@
-const stringTransformer = (str) => {
-  const switchCase = (letter) => {
+// const stringTransformer = (str) => {
+//   const switchCase = (letter) => {
     
-  }
+//   }
 
-  const reverseArr = (str.trim().split(' ').reverse())  
+//   const reverseArr = (str.trim().split(' ').reverse())  
   
-  reverseArr.forEach((word) => {
+//   reverseArr.forEach((word) => {
 
-  })
+//   })
 
-  return reverseArr
-};
+//   return reverseArr
+// };
 
-console.log(stringTransformer("Example Input"))
+// console.log(stringTransformer("Example Input"))
