@@ -9,7 +9,7 @@
 // iqTest("1 2 1 1") => 2 // Second number is even, while the rest of the numbers are odd
 
 const iqTest = (numbers) => {
-  const numArr = numbers.split(' ').map(n => Number(n))
+  const numArr = numbers.split(' ').map(n => Number(n));
   let target;
   const evenArr = [];
   const oddArr = [];
@@ -25,7 +25,7 @@ const iqTest = (numbers) => {
     target = oddArr[0];
 
   return (numArr.indexOf(target)) + 1;
-}
+};
 
-console.log(iqTest('2 4 7 8 10'))
-console.log(iqTest("1 2 1 1"))
+console.log(iqTest('2 4 7 8 10'));
+console.log(iqTest("1 2 1 1"));

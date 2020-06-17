@@ -3,27 +3,26 @@ const list = (names) => {
   let namesStr = "";
   if (names.length === 1) {
     namesStr = names[0].name;
-  }
-  else {
-    for(let i = 0; i < names.length; i ++) {
+  } else {
+    for (let i = 0; i < names.length; i ++) {
       if (i > names.length - 2) {
-        namesStr += names[i].name
+        namesStr += names[i].name;
       } else {
-        namesStr += names[i].name 
-        i > names.length - 3? 
-        namesStr += " & ":
-        namesStr += ", ";
+        namesStr += names[i].name;
+        i > names.length - 3 ?
+          namesStr += " & " :
+          namesStr += ", ";
       }
     }
   }
   return namesStr;
-}
+};
 
 function betterList(names) {
-  var xs = names.map(p => p.name)
-  var x = xs.pop()
-  return xs.length ? xs.join(", ") + " & " + x : x || ""
+  let xs = names.map(p => p.name);
+  let x = xs.pop();
+  return xs.length ? xs.join(", ") + " & " + x : x || "";
 }
 
 
-console.log(list([{name: 'Bart'}, {name: 'Lisa'}, {name: 'Maggie'} ]))
+console.log(list([{name: 'Bart'}, {name: 'Lisa'}, {name: 'Maggie'} ]));

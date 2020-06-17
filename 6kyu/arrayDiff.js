@@ -1,3 +1,4 @@
+/* eslint-disable func-style */
 // Your goal in this kata is to implement a difference function, which subtracts one list from another and returns the result.
 
 // It should remove all values from list a, which are present in list b.
@@ -10,11 +11,11 @@
 
 
 function arrayDiff(a, b) {
-  let result = a
+  let result = a;
   b.forEach(bNum => {
-    result = result.filter(aNum => aNum !== bNum)
-  })
-  return result
+    result = result.filter(aNum => aNum !== bNum);
+  });
+  return result;
 }
-console.log(arrayDiff([1,2],[1]))
-console.log(arrayDiff([1,2,2,2,3],[2, 3]))
+console.log(arrayDiff([1,2],[1]));
+console.log(arrayDiff([1,2,2,2,3],[2, 3]));

@@ -2,44 +2,18 @@
 
 // Note: you will always receive a validirections array containing a randirectionsom assortment of directionsirection letters ('n', 's', 'e', or 'w' only). It will never give you an empty array (that's not a walk, that's standirectionsing still!).
 
-// const isValidWalk = (walk) => {
-//   if (walk.length !== 10) {
-//     return false
-//   }
-
-//   let x = 0;
-//   let y = 0; 
-  
-//   const map = {
-//     n: 1,
-//     s: -1,
-//     e: 1,
-//     w: -1
-//   };
-
-//   for(const step of walk){
-//     step === 'n' || step === 's' ?
-//       x += map[step] :
-//       y += map[step];
-//   }
-  
-//   if(x !== 0 || y !== 0) {
-//     return false;
-//   }
-//   return true;
-// };
 
 const isValidWalk = (walk) => {
   const directions = {n: 0, e: 0, s: 0, w: 0};
 
-  for(const direction in directions) {
+  for (const direction in directions) {
     directions[direction] = walk.filter(step => {
-      return step === direction
+      return step === direction;
     }).length;
   }
 
-  return walk.length === 10 && directions.n === directions.s && directions.e === directions.w
-}
+  return walk.length === 10 && directions.n === directions.s && directions.e === directions.w;
+};
 
 console.log(isValidWalk(['n','s','n','s','n','s','n','s','n','s']));
 console.log(isValidWalk(['w','e','w','e','w','e','w','e','w','e','w','e']));

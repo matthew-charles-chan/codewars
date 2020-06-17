@@ -1,4 +1,4 @@
-/* 
+/*
 A bookseller has lots of books classified in 26 categories labeled A, B, ... Z. Each book has a cat c of 3, 4, 5 or more capitals letters. The 1st letter of a cat is the capital letter of the book category. In the bookseller's stocklist each cat c is followed by a space and by a positive integer n (int n >= 0) which indicates the quantity of books of this cat in stock.
 
 For example an extract of one of the stocklists could be:
@@ -9,7 +9,7 @@ or
 L = ["ABART 20", "CDXEF 50", "BKWRK 25", "BTSQZ 89", "DRTYM 60"] or ....
 You will be given a stocklist (art.g. : L) and a list of categories in capital letters art.g :
 
-  M = {"A", "B", "C", "W"} 
+  M = {"A", "B", "C", "W"}
 or
 
   M = ["A", "B", "C", "W"] or ...
@@ -57,22 +57,22 @@ In the result cats and their values are in the same order as in M.
 
 const stockList = (listOfArt, listOfCat) => {
   if (!listOfArt.length) return "";
-  const stock = {}
+  const stock = {};
 
   listOfArt.map(art => {
-    const cat = art.split(" ")[0][0]
-    const quantity = Number(art.split(" ")[1])
-    stock[cat] = (stock[cat] | 0) + quantity
-  })
+    const cat = art.split(" ")[0][0];
+    const quantity = Number(art.split(" ")[1]);
+    stock[cat] = (stock[cat] | 0) + quantity;
+  });
 
   const results = listOfCat.map(e => {
-    return `(${e} : ${stock[e] | 0})`
-  })
+    return `(${e} : ${stock[e] | 0})`;
+  });
 
-  return results.join(' - ')
-}
+  return results.join(' - ');
+};
 
 const b = ["ABAR 200", "CDXE 500", "BKWR 250", "BTSQ 890", "DRTY 600"];
-const c = ["A", "B", "Z"]
+const c = ["A", "B", "Z"];
 // stockList(b, c)
-console.log(stockList(b, c))
+console.log(stockList(b, c));

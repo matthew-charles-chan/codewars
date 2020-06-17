@@ -12,25 +12,25 @@
 // For the word "strength", solve("strength") = 57
 // -- The consonant substrings are: "str" and "ngth" with values "str" = 19 + 20 + 18 = 57 and "ngth" = 14 + 7 + 20 + 8 = 49. The highest is 57.
 
-function solve(string) {
-  subStringArr = string.split(/[\aeiouAEIOU]/)
+const solve = (string) => {
+  let subStringArr = string.split(/[\aeiouAEIOU]/);
 
-  maxValue = 0
+  let maxValue = 0;
   
   subStringArr.map((subString) => {
-   subStringVal = 0 
-   for (let i = 0; i < subString.length; i++) {
-     subStringVal += Number(subString.charCodeAt(i))-96
-   }
-   if( subStringVal > maxValue ) {
-     maxValue = subStringVal
-   }
-  })
- return maxValue
-}
+    let subStringVal = 0;
+    for (let i = 0; i < subString.length; i++) {
+      subStringVal += Number(subString.charCodeAt(i)) - 96;
+    }
+    if (subStringVal > maxValue) {
+      maxValue = subStringVal;
+    }
+  });
+  return maxValue;
+};
 
-solve("hello")
-solve("strength")
+solve("hello");
+solve("strength");
 
 
 

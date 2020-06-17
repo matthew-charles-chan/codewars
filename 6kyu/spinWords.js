@@ -3,17 +3,17 @@ const spinWords = (string) => {
   let reverseWordsArr = [];
 
   for (const word of words) {
-    if(word.length >= 5 ) {
-      reverseWordsArr.push(word.split('').reverse().join(''))
+    if (word.length >= 5) {
+      reverseWordsArr.push(word.split('').reverse().join(''));
     } else {
-      reverseWordsArr.push(word)
+      reverseWordsArr.push(word);
     }
   }
   
 
-  return reverseWordsArr.join(' ')
+  return reverseWordsArr.join(' ');
 
 };
 
 
-console.log(spinWords("Seriously this is the last one"))
+console.log(spinWords("Seriously this is the last one"));
