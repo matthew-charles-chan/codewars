@@ -1,20 +1,13 @@
 const productFib = (prod) => {
-  let lower = 1;
-  let higher = 2;
-  let test = false;
+  let n = 0;
+  let nPlus = 1;
   
-  do {
-    let tempLow = lower;
-    lower = higher;
-    higher = higher + tempLow;
+  while (n * nPlus < prod) {
+    nPlus = n + nPlus;
+    n = nPlus - n;
   }
-  while (lower * higher < prod);
-  
-  if (lower * higher === prod) {
-    test = true;
-  }
-  return [lower, higher, test];
-  
+
+  return [n, nPlus, n * nPlus === prod];
 };
 
 const products = [3, 4895, 5895, 74049690, 84049890];
