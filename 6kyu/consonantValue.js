@@ -28,7 +28,7 @@ const solve = (string) => {
   });
   return maxValue;
 };
-
+console.log(solve('zodiacs'));
 solve("hello");
 solve("strength");
 
