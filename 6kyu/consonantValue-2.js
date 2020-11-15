@@ -1,18 +1,18 @@
 
-const solve  = (str) => {
-  const subStrs = str.split(/[a,e,i,o,u]/);
-  let max = 0;
+const solve = (str) => {
+  const subStrs = str.split(/[a,e,i,o,u]/)
+  let max = 0
   subStrs.forEach(subStr => {
-    console.log(subStr);
-    let subStrVal = 0;
+    console.log(subStr)
+    let subStrVal = 0
     for (const cons of subStr) {
-      subStrVal += Number(subStr.charCodeAt(cons)) - 96;
+      subStrVal += Number(subStr.charCodeAt(cons)) - 96
     }
     if (subStrVal > max) {
-      max = subStrVal;
+      max = subStrVal
     }
-  });
-  return max;
-};
+  })
+  return max
+}
 
-console.log(solve('zodiacs'));
+console.log(solve('zodiacs'))

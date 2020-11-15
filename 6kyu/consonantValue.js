@@ -5,7 +5,6 @@
 
 // For example, for the word "zodiacs", let's cross out the vowels. We get: "z o d ia cs"
 
-
 // -- The consonant substrings are: "z", "d" and "cs" and the values are z = 26, d = 4 and cs = 3 + 19 = 22. The highest is 26.
 // solve("zodiacs") = 26
 
@@ -13,24 +12,21 @@
 // -- The consonant substrings are: "str" and "ngth" with values "str" = 19 + 20 + 18 = 57 and "ngth" = 14 + 7 + 20 + 8 = 49. The highest is 57.
 
 const solve = (string) => {
-  let subStringArr = string.split(/[\aeiouAEIOU]/);
+  const subStringArr = string.split(/[\aeiouAEIOU]/)
 
-  let maxValue = 0;
-  
+  let maxValue = 0
+
   subStringArr.map((subString) => {
-    let subStringVal = 0;
+    let subStringVal = 0
     for (let i = 0; i < subString.length; i++) {
-      subStringVal += Number(subString.charCodeAt(i)) - 96;
+      subStringVal += Number(subString.charCodeAt(i)) - 96
     }
     if (subStringVal > maxValue) {
-      maxValue = subStringVal;
+      maxValue = subStringVal
     }
-  });
-  return maxValue;
-};
-console.log(solve('zodiacs'));
-solve("hello");
-solve("strength");
-
-
-
+  })
+  return maxValue
+}
+console.log(solve('zodiacs'))
+solve('hello')
+solve('strength')

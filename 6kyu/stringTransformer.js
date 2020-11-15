@@ -1,10 +1,10 @@
 // const stringTransformer = (str) => {
 //   const switchCase = (letter) => {
-    
+
 //   }
 
-//   const reverseArr = (str.trim().split(' ').reverse())  
-  
+//   const reverseArr = (str.trim().split(' ').reverse())
+
 //   reverseArr.forEach((word) => {
 
 //   })

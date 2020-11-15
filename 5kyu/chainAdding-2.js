@@ -9,30 +9,25 @@
 // add(1)(2)(3)(4); // 10
 // add(1)(2)(3)(4)(5); // 15
 
-
-
 // const add = (i) => {
 //   let total = (j) => {
 //     console.log(j);
 //     // return add(i + j);
 //   };
-  
-
 
 // };
-function add(a) {
-  let total = function(b) {
-    return add(a + b);
-  };
-  console.log(total);
-  total.valueOf = function() {
-    return a;
-  };
-  return total;
+function add (a) {
+  const total = function (b) {
+    return add(a + b)
+  }
+  console.log(total)
+  total.valueOf = function () {
+    return a
+  }
+  return total
 }
 
 console.log(
 
   add(2)
-);
-
+)

@@ -1,4 +1,4 @@
-const add = function(x, y) {
+const add = function (x, y) {
   // if (y === 0) {
   //   return x;
   // } else {
@@ -11,7 +11,7 @@ const add = function(x, y) {
     // 011
     // ___
     // 001 (1)
-    const carryDigit = x & y;
+    const carryDigit = x & y
 
     // Logical XOR
     // 001
@@ -19,15 +19,15 @@ const add = function(x, y) {
     // ___
     // 010 (2)
 
-    x = x ^ y;
+    x = x ^ y
 
     // move carryDigit to the left
     // 001
     // ___
     // 010 (2)
-    y = carryDigit << 1;
+    y = carryDigit << 1
   }
-  return x;
-};
+  return x
+}
 
-console.log(add(3, 1));
+console.log(add(3, 1))

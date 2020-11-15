@@ -8,14 +8,12 @@
 
 // arrayDiff([1,2,2,2,3],[2]) == [1,3]
 
-
-
-function arrayDiff(a, b) {
-  let result = a;
+function arrayDiff (a, b) {
+  let result = a
   b.forEach(bNum => {
-    result = result.filter(aNum => aNum !== bNum);
-  });
-  return result;
+    result = result.filter(aNum => aNum !== bNum)
+  })
+  return result
 }
-console.log(arrayDiff([1,2],[1]));
-console.log(arrayDiff([1,2,2,2,3],[2, 3]));
+console.log(arrayDiff([1, 2], [1]))
+console.log(arrayDiff([1, 2, 2, 2, 3], [2, 3]))

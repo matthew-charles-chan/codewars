@@ -1,0 +1,23 @@
+{
+  "name": "codewars",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthew-charles-chan/codewars.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matthew-charles-chan/codewars/issues"
+  },
+  "homepage": "https://github.com/matthew-charles-chan/codewars#readme",
+  "dependencies": {
+    "standard": "^16.0.2",
+    "standardjs": "^1.0.0-alpha"
+  }
+}

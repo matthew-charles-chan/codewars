@@ -56,23 +56,23 @@ In the result cats and their values are in the same order as in M.
 // }
 
 const stockList = (listOfArt, listOfCat) => {
-  if (!listOfArt.length) return "";
-  const stock = {};
+  if (!listOfArt.length) return ''
+  const stock = {}
 
   listOfArt.map(art => {
-    const cat = art.split(" ")[0][0];
-    const quantity = Number(art.split(" ")[1]);
-    stock[cat] = (stock[cat] | 0) + quantity;
-  });
+    const cat = art.split(' ')[0][0]
+    const quantity = Number(art.split(' ')[1])
+    stock[cat] = (stock[cat] | 0) + quantity
+  })
 
   const results = listOfCat.map(e => {
-    return `(${e} : ${stock[e] | 0})`;
-  });
+    return `(${e} : ${stock[e] | 0})`
+  })
 
-  return results.join(' - ');
-};
+  return results.join(' - ')
+}
 
-const b = ["ABAR 200", "CDXE 500", "BKWR 250", "BTSQ 890", "DRTY 600"];
-const c = ["A", "B", "Z"];
+const b = ['ABAR 200', 'CDXE 500', 'BKWR 250', 'BTSQ 890', 'DRTY 600']
+const c = ['A', 'B', 'Z']
 // stockList(b, c)
-console.log(stockList(b, c));
+console.log(stockList(b, c))

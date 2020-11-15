@@ -14,20 +14,20 @@ Output string must be two numbers separated by a single space, and highest numbe
 */
 
 const highAndLow = (numbers) => {
-  const numsArr = numbers.split(" ").map(n => Number(n));
+  const numsArr = numbers.split(' ').map(n => Number(n))
 
-  let maxMin = [numsArr[0], numsArr[0]];
+  const maxMin = [numsArr[0], numsArr[0]]
 
   for (const num of numsArr) {
     if (num > maxMin[0]) {
-      maxMin[0] = num;
+      maxMin[0] = num
     }
     if (num < maxMin[1]) {
-      maxMin[1] = num;
+      maxMin[1] = num
     }
   }
 
-  return maxMin.join(' ');
-};
+  return maxMin.join(' ')
+}
 
-console.log(highAndLow("4 5 29 54 4 0 -214 542 -64 1 -3 6 -6"));
+console.log(highAndLow('4 5 29 54 4 0 -214 542 -64 1 -3 6 -6'))

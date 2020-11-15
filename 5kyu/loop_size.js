@@ -15,22 +15,21 @@
 //   return length;
 // };
 
-
 const loop_size = (node) => {
   // pick any node to start, as hare moves 2x turtle, it will eventually
-  let hare = node;
-  let turtle = node;
-  do  {
-    turtle = turtle.getNext();
-    hare = hare.getNext().getNext();
+  let hare = node
+  let turtle = node
+  do {
+    turtle = turtle.getNext()
+    hare = hare.getNext().getNext()
   }
-  while (turtle !== hare);
+  while (turtle !== hare)
 
-  let count = 0;
-  do  {
-    count++;
-    hare = hare.getNext();
+  let count = 0
+  do {
+    count++
+    hare = hare.getNext()
   }
-  while (turtle !== hare);
-  return count;
-};
+  while (turtle !== hare)
+  return count
+}
